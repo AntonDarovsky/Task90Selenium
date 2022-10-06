@@ -18,7 +18,7 @@ namespace YandexSeleniumTests
 
         public static readonly By _mailSettingsButton = By.XPath("//*[contains(@class,'mail - SettingsButton')]");
 
-        public static readonly By _userButton = By.CssSelector(".user-account__name");
+        public static readonly By _userButton = By.CssSelector(".user-account_left-name");
 
         public static readonly By _logOutButton = By.XPath("//*[contains(@class, 'legouser__menu-item_action_exit')]");
 
@@ -47,7 +47,7 @@ namespace YandexSeleniumTests
         {
             Driver.WaitForElement(_userButton, TimeSpan.FromMinutes(3)).Click();
 
-            Driver.WaitForElement(_logOutButton, TimeSpan.FromMinutes(2)).Click();
+            Driver.WaitForElement(_logOutButton, TimeSpan.FromMinutes(3)).Click();
         }
         
     }
