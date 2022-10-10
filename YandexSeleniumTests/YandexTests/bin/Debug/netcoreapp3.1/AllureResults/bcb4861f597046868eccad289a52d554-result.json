@@ -1,0 +1,111 @@
+{
+  "uuid": "b4fd8f2d-7ee8-4a32-b708-7307dcc62c42-tr-0-1001",
+  "historyId": "YandexTests.YandexLoginTests.LoginYandexTest",
+  "fullName": "YandexTests.YandexLoginTests.LoginYandexTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "MSQ-NBW-8318"
+    },
+    {
+      "name": "package",
+      "value": "YandexTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "LoginYandexTest"
+    },
+    {
+      "name": "testClass",
+      "value": "YandexLoginTests"
+    },
+    {
+      "name": "tag",
+      "value": "NUnit"
+    },
+    {
+      "name": "tag",
+      "value": "Debug"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "feature",
+      "value": "Yandex"
+    },
+    {
+      "name": "owner",
+      "value": "Anton"
+    },
+    {
+      "name": "subSuite",
+      "value": "FirstSuite"
+    }
+  ],
+  "links": [
+    {
+      "name": "SM-143",
+      "url": "SM-143",
+      "type": "issue"
+    }
+  ],
+  "name": "LoginYandexTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "LoginYandexTest"
+  },
+  "stage": "finished",
+  "description": "Yandex login check\n",
+  "steps": [
+    {
+      "name": "LoginYandexTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "This method is login in Yandex email",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1665077343354,
+          "stop": 1665077353089
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "81ba82404c0d4fb8aa0308e058f26be3-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1665077340725,
+      "stop": 1665077369348
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1665077340725,
+  "stop": 1665077369358
+}
