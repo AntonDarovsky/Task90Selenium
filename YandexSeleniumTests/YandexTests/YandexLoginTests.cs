@@ -1,29 +1,54 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
-using System.Threading;
 using YandexSeleniumTests;
+using Assert = NUnit.Framework.Assert;
+using Allure.Commons;
+using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
 
 namespace YandexTests
 {
-    [TestClass]
+    [TestFixture(Description = "Yandex login check")]
+    [AllureNUnit]
     public class YandexLoginTests
     {
-        [TestMethod]
-        public void LoginYandexTest()
+        public IWebDriver driver;
+
+        [OneTimeSetUp]
+        public void ClearResultsDir()
         {
-            IWebDriver driver = new ChromeDriver();
+            AllureLifecycle.Instance.CleanupResultDirectory();
+        }
+        [SetUp]
+        public void Open()
+        {
+            driver = new ChromeDriver();
 
             driver.Url = "https://www.yandex.com/";
 
             driver.Manage().Window.Maximize();
+        }
 
+        [TearDown]
+        public void Close()
+        {
+            driver.Close();
+        }
+        [Test]
+        [AllureStep("This method is login in Yandex email")]
+        [AllureTag("NUnit", "Debug")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureFeature("Yandex")]
+        [AllureOwner("Anton")]
+        [AllureSubSuite("FirstSuite")]
+        [AllureIssue("SM-143")]
+        public void LoginYandexTest()
+        {
             HomePageYandex homeYandex = new HomePageYandex(driver);
 
             homeYandex.ClickLoginButton();
-
-            homeYandex.TakeScreenshot(driver, "../Test.png");
 
             LoginPageYandex loginPageYandex = homeYandex.GoToLoginPage();
 
@@ -36,8 +61,6 @@ namespace YandexTests
             var element = driver.WaitForElement(By.CssSelector(".Button2-Text"), TimeSpan.FromMinutes(2));
 
             Assert.IsTrue(element.Displayed, "Wrong page!");
-
-            driver.Close();
         }
     }
 }

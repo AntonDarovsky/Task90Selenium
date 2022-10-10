@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Drawing.Imaging;
+using System.Threading;
 
 namespace YandexSeleniumTests
 {
@@ -24,11 +25,6 @@ namespace YandexSeleniumTests
             Driver.WaitForElement(_LoginButton2, TimeSpan.FromMinutes(2)).Click();
             return new LoginPageYandex(Driver);
         }
-        public void TakeScreenshot(IWebDriver driver, string saveLocation)
-        {
-            ITakesScreenshot screenshotDriver = driver as ITakesScreenshot;
-            Screenshot screenshot = screenshotDriver.GetScreenshot();
-            screenshot.SaveAsFile(saveLocation, ScreenshotImageFormat.Png);
-        }
+       
     }
 }

@@ -1,0 +1,59 @@
+{
+  "uuid": "a319c151-e574-4d42-b269-48cde764d8b2-tc-0-1000",
+  "name": "YandexTests.YandexLoginTests.LoginYandexTest",
+  "children": [
+    "b4fd8f2d-7ee8-4a32-b708-7307dcc62c42-tr-0-1001"
+  ],
+  "befores": [
+    {
+      "name": "ClearResultsDir",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1665077369342,
+      "stop": 1665077369342
+    },
+    {
+      "name": "Open",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1665077369343,
+      "stop": 1665077369343
+    }
+  ],
+  "afters": [
+    {
+      "name": "Close",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1665077369343,
+      "stop": 1665077369343
+    }
+  ],
+  "links": [],
+  "start": 1665077340718,
+  "stop": 1665077369405
+}
